@@ -31,6 +31,7 @@ feature 'let a user sign up' do
     click_button('Sign Up')
     expect(User.count).to eq(0)
     expect(page).to have_current_path("/sign_up")
+    expect(page).to have_content("Email must not be blank")
   end
 
   scenario 'user cannot sign in with an invalid email address' do
@@ -41,6 +42,13 @@ feature 'let a user sign up' do
     click_button('Sign Up')
     expect(User.count).to eq(0)
     expect(page).to have_current_path("/sign_up")
+    expect(page).to have_content("Email has an invalid format")
+  end
+
+  scenario "user cannot sign in twice" do
+    complete_signin
+    expect{complete_signin}.to_not change(User, :count)
+    expect(page).to have_content("Email address already in use")
   end
 
 end
