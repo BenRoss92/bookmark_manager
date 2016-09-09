@@ -3,7 +3,7 @@
 <form action="/sign_up" method="post">
   <label for="email">
     Email:
-    <input type="text" name="email" value='<%= @user.email %>'>
+    <input type="text" name="email" value='<%= @user.email %>' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
   </label>
   <label for="password">
       Password:
