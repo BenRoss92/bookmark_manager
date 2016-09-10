@@ -32,6 +32,15 @@ class Bookmark < Sinatra::Base
     end
   end
 
+  get '/sign_in' do
+    erb :'users/sign_in'
+  end
+
+  post '/sign_in' do
+    User.password.first(:password => params[:password]) == BCrypt::Password.new(params[:password])
+
+  end
+
   get '/links' do
     @links = Link.all
     erb :'links/index'

@@ -20,7 +20,7 @@ feature 'let a user sign up' do
     click_button('Sign Up')
     expect(User.count).to eq(0)
     expect(page).to have_current_path("/sign_up")
-    expect(page).to have_content("Passwords do not match")
+    expect(page).to have_content("Password does not match the confirmation")
   end
 
   scenario 'user cannot sign in without an email address' do
@@ -48,7 +48,7 @@ feature 'let a user sign up' do
   scenario "user cannot sign in twice" do
     complete_signin
     expect{complete_signin}.to_not change(User, :count)
-    expect(page).to have_content("Email address already in use")
+    expect(page).to have_content("Email is already taken")
   end
 
 end
