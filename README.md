@@ -1,4 +1,8 @@
-#Bookmark Manager
+# Bookmark Manager
+
+## Overview
+
+A web app that stores and maintains a collection of web bookmarks in a database. It can save useful webpages, add tags to them for easy searching and browse links added by other users.
 
 ## User Stories:
 
@@ -24,7 +28,7 @@ So that I can find relevant links quickly
 I want to filter links by their tags
 ```
 
-## What is CRUD?
+## What I learnt about 'CRUD'
 
 REPHRASE - The CRUD concept applies across many different relational database systems
 
@@ -47,7 +51,7 @@ Can also describe user interface conventions - e.g. viewing, searching and chang
 
 Data protection - Can lock data - prevents users access for deleting valuable data
 
-Data life cycle - When data becomes obselete, it is deleted
+Data life cycle - When data becomes obsolete, it is deleted
 
 Different users can have different CRUD cycles
 
@@ -61,8 +65,7 @@ An operations manager can create product records, call them when needed, change 
 
 Users and administrators have privileges - to create, browse, edit or delete online records.
 
-
-## What is SQL?
+## What I learnt about SQL
 
 Structured Query language
 
